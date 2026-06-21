@@ -57,9 +57,9 @@ Merge de atributos en card:
 - `Route::view()` es un shorthand útil para rutas que solo cargan una vista.
 
 ### Evidencia
-![episodio4-01](img/episodio4-01.png)
-![episodio4-02](img/episodio4-02.png)
-![episodio4-03](img/episodio4-03.png)
-![episodio4-04](img/episodio4-04.png)
-![episodio4-05](img/episodio4-05.png)
-![episodio4-06](img/episodio4-06.png)
+![episodio4-01](../img/episodio4-01.png)
+![episodio4-02](../img/episodio4-02.png)
+![episodio4-03](../img/episodio4-03.png)
+![episodio4-04](../img/episodio4-04.png)
+![episodio4-05](../img/episodio4-05.png)
+![episodio4-06](../img/episodio4-06.png)
