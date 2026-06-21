@@ -3,3 +3,4 @@
 ## Índice
 
 - [Routing 101](./routes/routes-101.md)
+- [Layout Files](./layouts/layout-files.md)

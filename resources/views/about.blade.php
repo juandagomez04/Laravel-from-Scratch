@@ -10,8 +10,8 @@
 
     <div>
 
-        <a href="/about">
-            About us
+        <a href="/">
+            Return Home
         </a>
 
     </div>

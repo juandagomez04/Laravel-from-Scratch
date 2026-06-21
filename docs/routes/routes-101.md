@@ -1,15 +1,47 @@
-# Routing 101
+## Episodio 03: Routing 101
 
-## Episodio 3: Routing 101
+### Resumen
+En este episodio aprendí cómo funcionan las rutas en Laravel. Se explicó la sintaxis 
+básica de `Route::get()` y cómo relacionar una URL con una vista. También se mostró 
+dónde se encuentran las vistas dentro del proyecto y cómo crear nuevas páginas.
 
-En este episodio se introduce el concepto de rutas en Laravel, que son la forma en que se definen las URL de la aplicación y cómo se manejan las solicitudes HTTP. Se explica cómo crear rutas básicas, cómo pasar parámetros a las rutas y cómo utilizar controladores para manejar la lógica de las rutas.
+### Actividades realizadas
+- Revisé la ruta principal definida en `routes/web.php`.
+- Analicé la sintaxis de `Route::get()`.
+- Modifiqué el contenido de la vista `welcome.blade.php`.
+- Creé una ruta para la página About.
+- Creé la vista `about.blade.php`.
+- Agregué enlaces para navegar entre páginas.
 
-### Definiendo Rutas Básicas
+### Comandos y código relevante
 
-Para definir una ruta básica en Laravel, se utiliza el archivo `routes/web.php`. En este archivo, se pueden definir rutas utilizando el método `Route::get()`, que acepta dos parámetros: la URL de la ruta y una función anónima que devuelve una respuesta.
-
+Ruta principal:
 ```php
-    Route::get('/', function () {
-        return view('welcome');
-    });
+Route::get('/', function () {
+    return view('welcome');
+});
 ```
+
+Ruta para About:
+```php
+Route::get('/about', function () {
+    return view('about');
+});
+```
+
+### Archivos modificados
+- `routes/web.php`
+- `resources/views/welcome.blade.php`
+- `resources/views/about.blade.php`
+
+### Lo que aprendí
+- Las rutas se definen en el archivo `routes/web.php`.
+- El método `Route::get()` permite responder a solicitudes GET.
+- Las vistas se almacenan en la carpeta `resources/views`.
+- Cada ruta se conecta con una vista mediante el método `view()`.
+- Se pueden agregar enlaces entre páginas usando etiquetas `<a href="">`.
+
+### Evidencia
+![episodio3-01](../img/episodio3-01.png)
+![episodio3-02](../img/episodio3-02.png)
+![episodio3-03](../img/episodio3-03.png)
