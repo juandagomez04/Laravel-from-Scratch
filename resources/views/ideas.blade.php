@@ -75,9 +75,14 @@
         <div>
             <h2>Saved Ideas</h2>
             <ul>
-                @foreach($ideas as $idea)
-                    <li>{{ $idea }}</li>
-                @endforeach
+                @forelse($ideas as $idea)
+                    <li>
+                        {{ $idea->description }}
+                        <a href="/ideas/{{ $idea->id }}/delete">Delete</a>
+                    </li>
+                @empty
+                    <li>No ideas yet.</li>
+                @endforelse
             </ul>
         </div>
     @endif
