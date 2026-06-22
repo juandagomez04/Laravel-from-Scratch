@@ -11,10 +11,12 @@
         a {
             color: blue;
         }
+
         .max-w-400 {
             max-width: 400px;
             margin: auto;
         }
+
         .card {
             background-color: #e3e3e3;
             padding: 1rem;
@@ -25,7 +27,7 @@
 
 <body>
     <nav>
-        <a href="/">Home</a>
+        <a href="/ideas">Home</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
     </nav>

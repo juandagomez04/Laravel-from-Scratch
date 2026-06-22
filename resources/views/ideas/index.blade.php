@@ -77,8 +77,7 @@
             <ul>
                 @forelse($ideas as $idea)
                     <li>
-                        {{ $idea->description }}
-                        <a href="/ideas/{{ $idea->id }}/delete">Delete</a>
+                        <a href="/ideas/{{ $idea->id }}">{{ $idea->description }}</a>
                     </li>
                 @empty
                     <li>No ideas yet.</li>
