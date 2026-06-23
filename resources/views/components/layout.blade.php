@@ -1,7 +1,7 @@
 @props(['title' => 'Laravel'])
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -61,7 +61,7 @@
         }
 
         .card {
-            background: linear-gradient(180deg, rgba(6,24,54,0.6), rgba(4,36,66,0.6));
+            background: linear-gradient(180deg, rgba(6, 24, 54, 0.6), rgba(4, 36, 66, 0.6));
             color: #e6f7ff;
             padding: 1.25rem;
             text-align: center;
@@ -70,6 +70,8 @@
             border: 1px solid rgba(140, 200, 255, 0.08);
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -79,7 +81,8 @@
         <a href="/contact">Contact</a>
     </nav>
 
-    <main>
+    <x-nav />
+    <main class="max-w-3xl mx-auto mt-6">
         {{ $slot }}
     </main>
 </body>
