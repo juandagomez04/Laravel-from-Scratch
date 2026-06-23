@@ -2,8 +2,11 @@
     <form method="POST" action="/ideas">
         @csrf
         <div>
-            <label for="idea">Create New Idea</label>
-            <textarea name="idea" id="idea"></textarea>
+            <label for="description">New Idea</label>
+            <textarea name="description" id="description"></textarea>
+
+            <x-forms.error name="description" />
+
             <p>Have an idea you want to save for later?</p>
         </div>
         <button type="submit">Save</button>
