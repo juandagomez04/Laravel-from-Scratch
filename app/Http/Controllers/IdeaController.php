@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Idea;
 use App\Http\Requests\StoreIdeaRequest;
 use app\Http\Requests\IdeaRequest;
+use Illuminate\Support\Facades\Auth;
 
 class IdeaController extends Controller
 {
     public function index()
     {
-        $ideas = Idea::all();
+        $ideas = Idea::where('user_id', Auth::id())->get();
         return view('ideas.index', ['ideas' => $ideas]);
     }
 
@@ -23,8 +24,9 @@ class IdeaController extends Controller
     public function store(StoreIdeaRequest $request)
     {
         Idea::create([
-            'description' => $request->input('idea'),
-            'state' => 'pending'
+            'description' => $request->input('description'),
+            'user_id' => Auth::id(),
+            'state' => 'pending',
         ]);
 
         return redirect('/ideas');
