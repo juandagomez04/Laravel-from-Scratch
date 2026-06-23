@@ -5,6 +5,7 @@
         <div>
             <label for="description">Edit your idea</label>
             <textarea name="description" id="description">{{ $idea->description }}</textarea>
+            <x-forms.error name="description" />
         </div>
         <button type="submit">Update</button>
     </form>
