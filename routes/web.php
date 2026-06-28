@@ -24,9 +24,5 @@ Route::middleware('guest')->group(function () {
     Route::post('/login', [SessionsController::class, 'store']);
 });
 
-Route::get('/admin', function () {
-    return 'Private, admin-only area.';
-})->can('view-admin');
-
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');

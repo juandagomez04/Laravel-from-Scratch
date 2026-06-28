@@ -7,6 +7,7 @@ use App\Models\Idea;
 use App\Http\Requests\StoreIdeaRequest;
 use app\Http\Requests\IdeaRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class IdeaController extends Controller
 {
@@ -33,6 +34,7 @@ class IdeaController extends Controller
 
     public function show(Idea $idea)
     {
+        Gate::authorize('update', $idea);
         return view('ideas.show', ['idea' => $idea]);
     }
 
