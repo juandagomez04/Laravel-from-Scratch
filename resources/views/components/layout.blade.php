@@ -70,8 +70,10 @@
             border: 1px solid rgba(140, 200, 255, 0.08);
         }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" /> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
