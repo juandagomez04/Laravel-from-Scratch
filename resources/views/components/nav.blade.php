@@ -6,6 +6,10 @@
         <a class="btn btn-ghost" href="/ideas">Home</a>
         <a class="btn btn-ghost" href="/ideas/create">New Idea</a>
 
+        @can('view-admin')
+            <a class="btn btn-ghost" href="/admin">Admin</a>
+        @endcan
+
         @guest
             <a class="btn btn-ghost" href="/login">Login</a>
             <a class="btn btn-primary" href="/register">Register</a>

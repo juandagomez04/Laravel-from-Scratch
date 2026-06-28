@@ -12,7 +12,7 @@ class IdeaController extends Controller
 {
     public function index()
     {
-        $ideas = Auth::user()->ideas;
+        $ideas = Auth::check() ? Auth::user()->ideas : collect();
         return view('ideas.index', ['ideas' => $ideas]);
     }
 

@@ -5,14 +5,15 @@ use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\SessionsController;
 
-
-Route::get('/ideas', [IdeaController::class, 'index']);
-Route::get('/ideas/create', [IdeaController::class, 'create']);
-Route::post('/ideas', [IdeaController::class, 'store']);
-Route::get('/ideas/{idea}', [IdeaController::class, 'show']);
-Route::get('/ideas/{idea}/edit', [IdeaController::class, 'edit']);
-Route::patch('/ideas/{idea}', [IdeaController::class, 'update']);
-Route::delete('/ideas/{idea}', [IdeaController::class, 'destroy']);
+Route::middleware('auth')->group(function () {
+    Route::get('/ideas', [IdeaController::class, 'index']);
+    Route::get('/ideas/create', [IdeaController::class, 'create']);
+    Route::post('/ideas', [IdeaController::class, 'store']);
+    Route::get('/ideas/{idea}', [IdeaController::class, 'show']);
+    Route::get('/ideas/{idea}/edit', [IdeaController::class, 'edit']);
+    Route::patch('/ideas/{idea}', [IdeaController::class, 'update']);
+    Route::delete('/ideas/{idea}', [IdeaController::class, 'destroy']);
+});
 
 Route::delete('/logout', [SessionsController::class, 'destroy']);
 
@@ -22,6 +23,10 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [SessionsController::class, 'create']);
     Route::post('/login', [SessionsController::class, 'store']);
 });
+
+Route::get('/admin', function () {
+    return 'Private, admin-only area.';
+})->can('view-admin');
 
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');
