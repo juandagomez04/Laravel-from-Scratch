@@ -1,13 +1,13 @@
 @props(['title' => 'Laravel'])
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
-    <style>
+    <!-- <style>
         * {
             margin: 0;
             padding: 0;
@@ -69,7 +69,7 @@
             box-shadow: 0 6px 18px rgba(3, 14, 40, 0.6);
             border: 1px solid rgba(140, 200, 255, 0.08);
         }
-    </style>
+    </style>-->
     <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" /> -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
