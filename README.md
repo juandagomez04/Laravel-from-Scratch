@@ -46,6 +46,32 @@ php artisan serve
 8. Visitar en el navegador:
 http://localhost:8000/ideas
 
+## Comandos útiles del proyecto
+
+Compilar assets de Vite (requiere NODE_PATH configurado en la VM):
+NODE_PATH=/tmp/lfts-npm/node_modules /tmp/lfts-npm/node_modules/.bin/vite build
+
+Ejecutar el watcher de Vite en desarrollo:
+NODE_PATH=/tmp/lfts-npm/node_modules /tmp/lfts-npm/node_modules/.bin/vite
+
+Ejecutar el worker de colas (necesario para notificaciones encoladas):
+php artisan queue:work
+
+Ejecutar pruebas con Pest:
+./vendor/bin/pest
+
+Formatear código (Rector + Pint):
+composer run format
+
 ## Episodios documentados
 
 Los episodios del 1 al 16 están documentados en la carpeta `docs/`.
+
+Los episodios 17 al 21 agregan:
+- Episodio 17: Authorization Using Gates
+- Episodio 18: Authorization Using Policies
+- Episodio 19: Frontend Asset Bundling with Vite
+- Episodio 20: Notifications
+- Episodio 21: When to Queue it Up
+
+Toda la documentación detallada de cada episodio se encuentra en `docs/`.
